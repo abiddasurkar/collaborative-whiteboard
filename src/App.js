@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { useWhiteboardStore } from './store/whiteboardStore';
 import HomePage from './pages/HomePage';
 import Whiteboard from './pages/Whiteboard';
+import NotFound from './pages/NotFoundPage';
 import './App.css';
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-500 animate-pulse">
             <svg
@@ -59,10 +60,10 @@ function App() {
               />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold text-gray-800 mb-2">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
             Collaborative Whiteboard
           </h1>
-          <p className="text-gray-600">Loading...</p>
+          <p className="text-gray-600 dark:text-gray-400">Loading...</p>
         </div>
       </div>
     );
@@ -78,8 +79,8 @@ function App() {
           {/* Whiteboard Page */}
           <Route path="/board/:boardId" element={<Whiteboard />} />
 
-          {/* Catch all - redirect to home */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* 404 Not Found */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
