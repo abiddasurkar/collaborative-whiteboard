@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta
+      name="description"
+      content="A real-time collaborative whiteboard application for drawing, sketching, and sharing ideas online. Create, draw, and collaborate with others in real-time."
+    />
+    <meta name="keywords" content="whiteboard, collaborative drawing, sketching, real-time collaboration, online whiteboard">
+    <meta name="author" content="Abid Das Surkar">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Collaborative Whiteboard" />
+    <meta
+      property="og:description"
+      content="Draw, sketch, and collaborate in real-time on a shared whiteboard"
+    />
+    <meta property="og:url" content="https://abiddasurkar.github.io/collaborative-whiteboard" />
+    <meta property="og:site_name" content="Collaborative Whiteboard" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Collaborative Whiteboard" />
+    <meta property="twitter:description" content="Draw, sketch, and collaborate in real-time" />
+    
+    <!-- Apple Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Whiteboard" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon-192x192.png" />
+    
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://abiddasurkar.github.io/collaborative-whiteboard" />
+    
+    <!-- Google Analytics (Optional - Replace with your GA ID) -->
+    <!-- Uncomment and add your Google Analytics ID
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+    
+    <title>Collaborative Whiteboard - Draw & Collaborate in Real-Time</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html, body, #root {
+        width: 100%;
+        height: 100%;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      body {
+        background-color: #f9fafb;
+        color: #1f2937;
+      }
+      
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+          monospace;
+      }
+      
+      /* Loading state */
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      
+      .spinner {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin-right: 1rem;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="loading">
+        <div class="spinner"></div>
+        Loading Whiteboard...
+      </div>
+    </div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('%PUBLIC_URL%/service-worker.js')
+            .then(function(registration) {
+              console.log('ServiceWorker registration successful:', registration.scope);
+            })
+            .catch(function(error) {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
