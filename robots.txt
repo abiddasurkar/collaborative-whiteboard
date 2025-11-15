@@ -1,0 +1,54 @@
+# Collaborative Whiteboard - robots.txt
+# Rules for web crawlers and search engine bots
+
+# Allow all bots
+User-agent: *
+Allow: /collaborative-whiteboard/
+Allow: /collaborative-whiteboard/board/
+Disallow: /collaborative-whiteboard/admin/
+
+# Google specific
+User-agent: Googlebot
+Allow: /collaborative-whiteboard/
+Crawl-delay: 0
+
+# Bing specific
+User-agent: Bingbot
+Allow: /collaborative-whiteboard/
+Crawl-delay: 1
+
+# Yahoo specific
+User-agent: Slurp
+Allow: /collaborative-whiteboard/
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /collaborative-whiteboard/
+
+# Yandex
+User-agent: YandexBot
+Allow: /collaborative-whiteboard/
+
+# Baidu
+User-agent: Baiduspider
+Allow: /collaborative-whiteboard/
+
+# Default crawl delay for all bots
+Crawl-delay: 1
+
+# Request rate (pages per second)
+Request-rate: 1/1s
+
+# Sitemap location - IMPORTANT for SEO
+Sitemap: https://abiddasurkar.github.io/collaborative-whiteboard/sitemap.xml
+
+# Allow robots to access CSS, JS, and images
+Allow: *.js
+Allow: *.css
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp

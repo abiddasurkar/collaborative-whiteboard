@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:mobile="http://www.mobile.googlebot.com/schemas/mobile-1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home/Dashboard Page - Highest Priority -->
+  <url>
+    <loc>https://abiddasurkar.github.io/collaborative-whiteboard/</loc>
+    <lastmod>2025-11-15T10:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- Sample Board 1 -->
+  <url>
+    <loc>https://abiddasurkar.github.io/collaborative-whiteboard/board/sample-board-1</loc>
+    <lastmod>2025-11-15T10:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- Sample Board 2 -->
+  <url>
+    <loc>https://abiddasurkar.github.io/collaborative-whiteboard/board/sample-board-2</loc>
+    <lastmod>2025-11-15T10:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- Sample Board 3 -->
+  <url>
+    <loc>https://abiddasurkar.github.io/collaborative-whiteboard/board/sample-board-3</loc>
+    <lastmod>2025-11-15T10:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- Feature Pages - Medium Priority -->
+  <url>
+    <loc>https://abiddasurkar.github.io/collaborative-whiteboard/features</loc>
+    <lastmod>2025-11-15T10:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://abiddasurkar.github.io/collaborative-whiteboard/about</loc>
+    <lastmod>2025-11-15T10:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+
+</urlset>

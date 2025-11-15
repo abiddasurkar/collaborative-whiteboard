@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/collaborative-whiteboard/static/css/main.c689747e.css",
+    "main.js": "/collaborative-whiteboard/static/js/main.b8886fa8.js",
+    "index.html": "/collaborative-whiteboard/index.html",
+    "main.c689747e.css.map": "/collaborative-whiteboard/static/css/main.c689747e.css.map",
+    "main.b8886fa8.js.map": "/collaborative-whiteboard/static/js/main.b8886fa8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c689747e.css",
+    "static/js/main.b8886fa8.js"
+  ]
+}
