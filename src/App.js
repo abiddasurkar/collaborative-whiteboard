@@ -1,7 +1,7 @@
 // src/App.js
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useWhiteboardStore } from './store/whitboardStore';
+import { useWhiteboardStore } from './store/whiteboardStore';
 import HomePage from './pages/HomePage';
 import Whiteboard from './pages/Whiteboard';
 import './App.css';
